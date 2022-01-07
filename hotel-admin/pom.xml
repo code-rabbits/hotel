@@ -21,6 +21,11 @@
     </description>
 
     <dependencies>
-
+        <!--系统模块system-->
+        <dependency>
+            <groupId>com.star</groupId>
+            <artifactId>hotel-system</artifactId>
+            <version>${star.version}</version>
+        </dependency>
     </dependencies>
 </project>
