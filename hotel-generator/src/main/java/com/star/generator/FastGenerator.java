@@ -17,7 +17,7 @@ public class FastGenerator {
 
     private static String author ="聂建强";//作者名称
     private static String outputDir ="D:/";//生成的位置
-    private static String url ="jdbc:mysql://localhost:3306/blog2?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC";
+    private static String url ="jdbc:mysql://localhost:3306/hotel?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC";
     private static String username ="root";//数据库用户名
     private static String password ="123456";//数据库密码
     private static String parentPackage = "com.star";//顶级包结构

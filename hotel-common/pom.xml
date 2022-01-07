@@ -20,5 +20,14 @@
         common通用工具
     </description>
 
+    <dependencies>
+        <!--通用工具common-->
+        <dependency>
+            <groupId>com.star</groupId>
+            <artifactId>hotel-system</artifactId>
+            <version>${star.version}</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
