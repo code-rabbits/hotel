@@ -32,7 +32,7 @@
         <collection property="roleList" column="id" ofType="com.star.system.entity.Role" select="com.star.system.mapper.RoleMapper.selectRoleListByUserId"></collection>
     </resultMap>
 
-    <select id="selectUserByUserName" resultType="com.star.system.entity.SysUser">
+    <select id="selectUserByUserName" resultMap="userRoleResultMap">
         select * from sys_user where userName=#{username}
     </select>
 

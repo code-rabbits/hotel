@@ -61,7 +61,9 @@
                             <hr>
                         </dd>
                         <dd>
-                            <a href="javascript:;" class="login-out">退出登录</a>
+                            <!--<a href="javascript:;" class="login-out">退出登录</a>-->
+
+                            <a href="/sys/logout" class="login-out">退出登录</a>
                         </dd>
                     </dl>
                 </li>
@@ -127,7 +129,7 @@
 
 
         var options = {
-            iniUrl: "api/init.json",    // 初始化接口
+            iniUrl: "/api/init.json",    // 初始化接口
             clearUrl: "api/clear.json", // 缓存清理接口
             urlHashLocation: true,      // 是否打开hash定位
             bgColorDefault: false,      // 主题默认配置
@@ -141,6 +143,11 @@
 
 
         $('.login-out').on("click", function () {
+
+            // $.post("/sys/logout",function () {
+            //
+            // })
+
             layer.msg('退出登录成功', function () {
                 window.location = 'page/login-3.html';
             });

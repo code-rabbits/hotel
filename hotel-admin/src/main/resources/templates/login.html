@@ -73,10 +73,10 @@
                     <span class="bind-password icon icon-4"></span>
                 </div>
 
-                <div id="validatePanel" class="item" style="width: 137px;">
-                    <input type="text" name="captcha" placeholder="请输入验证码" maxlength="4">
-                    <img id="refreshCaptcha" class="validateImg"  src="../images/captcha.jpg" >
-                </div>
+                <!--<div id="validatePanel" class="item" style="width: 137px;">-->
+                <!--    <input type="text" name="captcha" placeholder="请输入验证码" maxlength="4">-->
+                <!--    <img id="refreshCaptcha" class="validateImg"  src="../images/captcha.jpg" >-->
+                <!--</div>-->
 
             </div>
             <div class="tip">
@@ -93,7 +93,7 @@
 <div class="footer">
     ©版权所有 2014-2018 叁贰柒工作室<span class="padding-5">|</span><a target="_blank" href="http://www.miitbeian.gov.cn">粤ICP备16006642号-2</a>
 </div>
-<script src="../lib/layui-v2.6.3/layui.js" charset="utf-8"></script>
+<script src="/lib/layui-v2.6.3/layui.js" charset="utf-8"></script>
 <script>
     layui.use(['form','jquery'], function () {
         var $ = layui.jquery,
@@ -136,9 +136,16 @@
                 layer.msg('验证码不能为空');
                 return false;
             }
-            layer.msg('登录成功', function () {
-                window.location = '../index.html';
-            });
+
+            //向后台发送登录请求
+            // $.post("/sys/login",data,function (result) {
+
+                location.href="/sys/index"
+                layer.msg("登录成功");
+            // })
+            // layer.msg('登录成功', function () {
+            //     window.location = '../index.html';
+            // });
             return false;
         });
     });
