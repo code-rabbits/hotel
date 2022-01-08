@@ -39,4 +39,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return new User(username,password,
                 AuthorityUtils.commaSeparatedStringToAuthorityList("admin,normal"));
     }
+
+    
 }

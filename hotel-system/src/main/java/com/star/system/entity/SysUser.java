@@ -16,7 +16,7 @@ import lombok.Setter;
  * </p>
  *
  * @author 聂建强
- * @since 2022-01-07
+ * @since 2022-01-08
  */
 @Getter
 @Setter
@@ -32,8 +32,8 @@ public class SysUser {
     /**
      * 用户名
      */
-    @TableField("userName")
-    private String userName;
+    @TableField("username")
+    private String username;
 
     /**
      * 密码
@@ -44,11 +44,11 @@ public class SysUser {
     /**
      * 真实姓名	
      */
-    @TableField("realName")
-    private String realName;
+    @TableField("realname")
+    private String realname;
 
     /**
-     * 性别（1-男 2-女）
+     * 性别（0-男 1-女）
      */
     @TableField("sex")
     private Integer sex;
@@ -56,14 +56,8 @@ public class SysUser {
     /**
      * 所属部门，对应部门表主键
      */
-    @TableField("deptId")
-    private Integer deptId;
-
-    /**
-     * 状态（1-可用 2-禁用）
-     */
-    @TableField("status")
-    private Integer status;
+    @TableField("deptid")
+    private Integer deptid;
 
     /**
      * 邮箱
@@ -78,46 +72,46 @@ public class SysUser {
     private String phone;
 
     /**
-     * 用户类型（1-超级管理员 2-普通用户）
+     * 用户类型（0-超级管理员1-管理员 2-普通用户）
      */
-    @TableField("userType")
-    private Integer userType;
+    @TableField("usertype")
+    private Integer usertype;
 
     /**
      * 入职日期
      */
-    @TableField("hireDate")
-    private LocalDateTime hireDate;
+    @TableField("hiredate")
+    private LocalDateTime hiredate;
 
     /**
-     * 创建人
+     * 所属领导
      */
-    @TableField("createdBy")
-    private Integer createdBy;
+    @TableField("mgr")
+    private Integer mgr;
 
     /**
-     * 创建时间
+     * 状态（1-可用 0-禁用）
      */
-    @TableField("createDate")
-    private LocalDateTime createDate;
+    @TableField("status")
+    private Integer status;
 
     /**
-     * 修改人
+     * 头像
      */
-    @TableField("modifyBy")
-    private Integer modifyBy;
-
-    /**
-     * 修改时间
-     */
-    @TableField("modifyDate")
-    private LocalDateTime modifyDate;
+    @TableField("avatar")
+    private String avatar;
 
     /**
      * 备注
      */
     @TableField("remark")
     private String remark;
+
+    /**
+     * 用户地址
+     */
+    @TableField("address")
+    private String address;
 
     //一个用户有多个角色
     private List<Role> roleList;

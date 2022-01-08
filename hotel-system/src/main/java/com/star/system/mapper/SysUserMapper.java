@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
  * </p>
  *
  * @author 聂建强
- * @since 2022-01-07
+ * @since 2022-01-08
  */
 @Mapper
 public interface SysUserMapper extends BaseMapper<SysUser> {
@@ -20,5 +20,4 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
      * @return
      */
     SysUser selectUserByUserName(String username);
-
 }

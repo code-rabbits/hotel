@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.star.system.mapper.SysUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.star.system.entity.SysUser">
+        <id column="id" property="id" />
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="realname" property="realname" />
+        <result column="sex" property="sex" />
+        <result column="deptid" property="deptid" />
+        <result column="email" property="email" />
+        <result column="phone" property="phone" />
+        <result column="usertype" property="usertype" />
+        <result column="hiredate" property="hiredate" />
+        <result column="mgr" property="mgr" />
+        <result column="status" property="status" />
+        <result column="avatar" property="avatar" />
+        <result column="remark" property="remark" />
+        <result column="address" property="address" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, username, password, realname, sex, deptid, email, phone, usertype, hiredate, mgr, status, avatar, remark, address
+    </sql>
+
+    <!--用户角色关系ResultMap-->
+    <resultMap id="userRoleResultMap" type="com.star.system.entity.SysUser" extends="BaseResultMap">
+        <!-- 一对多-->
+        <collection property="roleList" column="id" ofType="com.star.system.entity.Role" select="com.star.system.mapper.RoleMapper.selectRoleListByUserId"></collection>
+    </resultMap>
+
+    <select id="selectUserByUserName" resultType="com.star.system.entity.SysUser">
+        select * from sys_user where userName=#{username}
+    </select>
+
+</mapper>

@@ -12,16 +12,14 @@ import java.util.List;
  * </p>
  *
  * @author 聂建强
- * @since 2022-01-07
+ * @since 2022-01-08
  */
 @Mapper
 public interface RoleMapper extends BaseMapper<Role> {
-
     /**
      * 根据用户ID查询角色列表
      * @param userId
      * @return
      */
     List<Role> selectRoleListByUserId(Integer userId);
-
 }
