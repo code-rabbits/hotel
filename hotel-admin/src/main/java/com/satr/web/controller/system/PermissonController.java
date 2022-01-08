@@ -1,4 +1,4 @@
-package com.star.system.controller;
+package com.satr.web.controller.system;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
