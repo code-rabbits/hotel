@@ -1,4 +1,4 @@
-package com.star.common.config;
+package com.star.system.config;
 
 import com.star.system.security.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;

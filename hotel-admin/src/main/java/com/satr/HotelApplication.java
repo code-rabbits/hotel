@@ -9,7 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * @author  聂建强
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = {
+        org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class
+})  //禁用springSecurity的默认安全配置
 public class HotelApplication {
     public static void main(String[] args) {
         SpringApplication.run(HotelApplication.class, args);
